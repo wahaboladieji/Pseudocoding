@@ -1,0 +1,17 @@
+FUNCTION base clamp
+INPUTS: number (number): the value to keep inside the limits
+        lower (number or nothing): the smallest allowed value, or nothing if there is no smallest
+        upper (number or nothing): the biggest allowed value, or nothing if there is no biggest
+OUTPUT: number: the input value, or the nearest limit if it was outside the limits
+SIDE EFFECTS: NONE
+FAILS WHEN: never. It stops with no error for any input.
+
+1. IF number is not equal to itself (this only happens for "not a number")
+     RETURN number unchanged
+2. IF upper is given
+     2.1 IF number is bigger than upper
+           set number to upper
+3. IF lower is given
+     3.1 IF number is smaller than lower
+           set number to lower
+4. RETURN number

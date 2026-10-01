@@ -1,0 +1,28 @@
+What the code says
+
+number = number >= lower ? number : lower
+
+Question: is number greater than or equal to lower?
+If yes, keep number.
+If no, use lower.
+
+So the code describes when to keep the number.
+
+What AI pseudocode says
+
+IF number is smaller than lower, set number to lower
+
+AI's version describes when to change the number.
+
+Why both give the same result
+
+There are only two cases for number and lower:
+
+number is greater than or equal to lower. The code keeps it. AI's pseudocode does not change it.
+number is smaller than lower. The code uses lower. AI's pseudocode sets it to lower.
+
+The "no" side of "greater than or equal to" is exactly "smaller than". So the two match.
+
+The upper check works the same way. The code says number <= upper ? number : upper. That means keep the number if it is less than or equal to upper, and otherwise use upper. AI's pseudocode says "IF number is bigger than upper, set number to upper."
+
+My understanding is "is number greater than or equal to lower? If yes, keep it. If no, use lower. 
